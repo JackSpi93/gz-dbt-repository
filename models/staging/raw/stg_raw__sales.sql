@@ -9,9 +9,10 @@ source as (
 renamed as (
 
     select
+        CONCAT(pdt_id,"_",date_date) AS PK ,
         date_date,
-        orders_id,
         pdt_id AS products_id,
+        orders_id,
         revenue,
         quantity
 
