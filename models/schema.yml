@@ -26,5 +26,48 @@ sources :
           tests : 
             - unique
             - not_null
-            
-          
+    - name : adwords
+      identifier : raw_gz_adwords
+      description : campaign detail from adwords
+      columns :
+        - name : campaign_key
+          description : Campaign key for this provider
+        - name : date_date
+          description : Date of the campaign
+      tests :
+        - unique :
+            column_name: "(campaign_key || '_' || date_date)"
+    - name : bing
+      identifier : raw_gz_bing
+      description : campaign detail from bing
+      columns :
+        - name : campaign_key
+          description : Campaign key for this provider
+        - name : date_date
+          description : Date of the campaign
+      tests :
+        - unique :
+            column_name: "(campaign_key || '_' || date_date)"
+    - name : criteo
+      identifier : raw_gz_criteo
+      description : campaign detail from criteo
+      columns :
+        - name : campaign_key
+          description : Campaign key for this provider
+        - name : date_date
+          description : Date of the campaign
+      tests :
+        - unique :
+            column_name: "(campaign_key || '_' || date_date)"
+    - name : facebook
+      identifier : raw_gz_facebook 
+      description : campaign detail from facebook
+      columns :
+        - name : campaign_key
+          description : Campaign key for this provider
+        - name : date_date
+          description : Date of the campaign
+      tests :
+        - unique :
+            column_name: "(campaign_key || '_' || date_date)"
+
